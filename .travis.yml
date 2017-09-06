@@ -8,7 +8,7 @@ env:
     - secure: "TIKWMn8IedxQ63PX8CLlvisALfPHdAiBV5jPGCoinhWrXEhYQIm3h//gQnE709K2yMnp5wTZz2MoNF+0io0jf8/dC/e1RYgfNzLXN++IB79kwC9+hudPYw+oHI5M8i60ta1ay0z0S2N5bsOng8okT2wUOixehLwbmg8G8q2lFWUg49qsvxSIBr0gINTw8jjt2WAjqF6ri0BzrgyKo1ViUH3fltvjFbksxbbipPy0lkZ0DFbSzDoxqMKFh/yk2b8JwOrTqnXyPwT4jGQZS96DNUEjeHYSTuijv/PV56Bjd0n+WqQA9d5W/hE2+SfhhMI47WACjI/SupO8XIEBWHa2KNnQOmoXrftPWyMylHHpXbjsYlAYeYVGcULHXNmMAAr33SnEVLidVXRHWh9dYkdrvUaKFgu3twrQQ5QU9UuM5WhGmu1q/1HrfvWqipC7hWEafrk9t+WbiJPD/VmDKP+Nbt8/B8uVVr8TAAnTh3agaWe2ydu7Sc/yip46l3o+25OIohM5Hzsvvr9G6uW24161cuXq6W8WR6Wfy/SFEkWuiIvo8cbGMSmKYemyLvVMxIW6t1tRBF+/z3pg8CcC2qtCjr3cI4v8kpeOXHTSCaiyYFxRI6sCMzEctFsDFsWD8GRlaoDoXlQx50BEjSgOA5dEfEoRcXkx9+MHh9d8H3KZrQ0=" #DOCKER_KEY
 
 before_install:
-- docker login -u=$DOCKER_EMAIL -p=$DOCKER_KEY quay.io
+- docker login -u=$DOCKER_USER -p=$DOCKER_KEY quay.io
 
 script:
 - "./build.sh"
