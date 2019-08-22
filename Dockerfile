@@ -1,4 +1,4 @@
-FROM phusion/baseimage:latest
+FROM phusion/baseimage:latest-amd64
 MAINTAINER TrueAccord
 
 # Set the locale
@@ -13,7 +13,6 @@ RUN chmod 755 /usr/sbin/installpkg
 
 RUN apt-get -qq update \
  && apt-get dist-upgrade -y --no-install-recommends -o Dpkg::Options::="--force-confold" \
- && apt-get -y install nano \
  && apt-get clean \
  && apt-get autoremove -y --purge \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
